@@ -4,7 +4,7 @@ import { routerTransition } from '../route.animation';
 @Component({
   selector: 'app-lazy',
   template: `
-  <div [@routerTransition]="getState(o)">
+  <div [@routeAnimation]="getState(o)">
 	  <router-outlet #o="outlet"></router-outlet>
   </div>
   `,

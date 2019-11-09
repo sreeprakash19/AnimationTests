@@ -1,6 +1,6 @@
-import {sequence, trigger, stagger, animate, style, group, query as q, transition, keyframes, animateChild} from '@angular/animations';
-const query = (s,a,o={optional:true})=>q(s,a,o);
+import {sequence, trigger, stagger, animate, style, group, query, transition, keyframes, animateChild} from '@angular/animations';
 
+/*
 export const routerTransition = trigger('routerTransition', [
   transition('* => *', [
     query(':enter, :leave', style({ position: 'fixed', width:'100%',height:'100%' })),
@@ -9,7 +9,8 @@ export const routerTransition = trigger('routerTransition', [
     group([
       query(':leave', [
         style({ transform: 'translateY(0%)' }),
-        animate('1.0s ease-in-out', style({transform: 'translateX(-100%)'}))
+        animate('1.0s ease-in-out', style({transform: 'translateX(-100%)'})),
+        animateChild()
       ]),
       query(':enter', [
         animate('1.0s ease-in-out', style({transform: 'translateX(0%)'})),
@@ -18,9 +19,9 @@ export const routerTransition = trigger('routerTransition', [
     ]),
   ]),
 ]);
+*/
 
 
-/*
 export const routerTransition =
 trigger('routeAnimation', [
   transition('* => *', [
@@ -50,4 +51,3 @@ trigger('routeAnimation', [
     query(':enter', animateChild(), { optional: true }),
   ])
 ])
-*/
