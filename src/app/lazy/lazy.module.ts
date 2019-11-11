@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import {MatButtonModule} from '@angular/material/button';
 import { LazyRoutingModule } from './lazy-routing.module';
 import { LazyComponent } from './lazy.component';
 import { Lazy1Component } from './lazy1.component';
@@ -12,7 +12,8 @@ import {MatCardModule} from '@angular/material/card';
     CommonModule,
     LazyRoutingModule,
     FlexLayoutModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ]
 })
 export class LazyModule { }

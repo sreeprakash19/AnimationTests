@@ -1,6 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+img:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+   
+  }
+
 @import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
 background-color: grey;
+}
+
+
+.row-height
+{
+  filter: drop-shadow(0 0 0.75rem crimson);
 }

@@ -1,26 +1,4 @@
-import {sequence, trigger, stagger, animate, style, group, query, transition, keyframes, animateChild} from '@angular/animations';
-
-/*
-export const routerTransition = trigger('routerTransition', [
-  transition('* => *', [
-    query(':enter, :leave', style({ position: 'fixed', width:'100%',height:'100%' })),
-    query(':enter', style({ transform: 'translateX(100%)' })),
-    
-    group([
-      query(':leave', [
-        style({ transform: 'translateY(0%)' }),
-        animate('1.0s ease-in-out', style({transform: 'translateX(-100%)'})),
-        animateChild()
-      ]),
-      query(':enter', [
-        animate('1.0s ease-in-out', style({transform: 'translateX(0%)'})),
-        animateChild()
-      ])
-    ]),
-  ]),
-]);
-*/
-
+import {trigger,animate, style, group, query, transition,animateChild} from '@angular/animations';
 
 export const routerTransition =
 trigger('routeAnimation', [
@@ -39,13 +17,14 @@ trigger('routeAnimation', [
      
     ], { optional: true }),
     query(':leave ', animateChild(), { optional: true }),
+    
     group([
       query(':leave', [
         animate('200ms ease-out', style({ left: '100%'}))
       ], { optional: true }),
       query(':enter', [
 
-        animate('3000ms ease-out', style({ left: '0%'}))
+        animate('1000ms ease-out', style({ left: '0%'}))
       ], { optional: true })
     ]),
     query(':enter', animateChild(), { optional: true }),
